@@ -41,15 +41,31 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="LYn-bu-dCz"/>
-                        <barButtonItem systemItem="rewind" id="1gB-2L-eez"/>
+                        <barButtonItem systemItem="rewind" id="1gB-2L-eez">
+                            <connections>
+                                <action selector="goBack:" destination="BYZ-38-t0r" id="4dJ-od-hJW"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="pOn-v5-T0j"/>
-                        <barButtonItem systemItem="refresh" id="lpV-b3-o0R"/>
+                        <barButtonItem systemItem="refresh" id="lpV-b3-o0R">
+                            <connections>
+                                <action selector="refresh:" destination="BYZ-38-t0r" id="dbO-95-IzF"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="4Pf-Bf-DDX"/>
-                        <barButtonItem systemItem="fastForward" id="1wb-Ly-w56"/>
+                        <barButtonItem systemItem="fastForward" id="1wb-Ly-w56">
+                            <connections>
+                                <action selector="goForward:" destination="BYZ-38-t0r" id="bAZ-KP-Gyx"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="TSt-be-JEt"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="BZ4-dz-N7R"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="s7z-Ov-AGo" id="34Q-O9-rdL"/>
+                        <outlet property="webView" destination="Che-hG-hNw" id="DMm-Iv-qGn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
