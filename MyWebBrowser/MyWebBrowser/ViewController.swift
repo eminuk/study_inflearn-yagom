@@ -45,12 +45,15 @@ class ViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func goBack(_ sender: UIBarButtonItem) {
+        // self.webView.stopLoading()
         self.webView.goBack()
     }
     @IBAction func goForward(_ sender: UIBarButtonItem) {
+        // self.webView.stopLoading()
         self.webView.goForward()
     }
     @IBAction func refresh(_ sender: UIBarButtonItem) {
+        self.webView.stopLoading()
         self.webView.reload()
     }
     
@@ -58,13 +61,13 @@ class ViewController: UIViewController {
     func showNetworkingIndicators() {
         self.activityIndicator.isHidden = false
         self.activityIndicator.startAnimating()
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        // UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
     func hideNetworkingIndicators() {
         self.activityIndicator.isHidden = true
         self.activityIndicator.stopAnimating()
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        // UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }
 
@@ -82,11 +85,11 @@ extension ViewController: WKNavigationDelegate {
                 print(error.localizedDescription)
                 return
             }
-            
+
             guard let title: String = value as? String else {
                 return
             }
-            
+
             self.navigationController?.title = title
         }
         self.hideNetworkingIndicators()
@@ -95,6 +98,11 @@ extension ViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         print("did fail navigation")
         print("\(error.localizedDescription)")
+        
+        //if error.code
+    
+        
+        //if([error code] != NSURLErrorCancelled) return;
         
         self.hideNetworkingIndicators()
         let message: String = "오류발생!\n" + error.localizedDescription
@@ -108,5 +116,10 @@ extension ViewController: WKNavigationDelegate {
         alert.addAction(okAuction)
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        print("did start provistional navigation")
+        self.showNetworkingIndicators()
     }
 }
