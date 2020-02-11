@@ -15,38 +15,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yagom" translatesAutoresizingMaskIntoConstraints="NO" id="lQ8-K2-aAt">
-                                <rect key="frame" x="20" y="44" width="115" height="123"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yagom" translatesAutoresizingMaskIntoConstraints="NO" id="lQ8-K2-aAt">
+                                <rect key="frame" x="16" y="60" width="100" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="qb2-sM-jkT"/>
+                                    <constraint firstAttribute="width" secondItem="lQ8-K2-aAt" secondAttribute="height" multiplier="167:160" id="st4-Xw-ZRb"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Se8-SY-Azv">
-                                <rect key="frame" x="159" y="44" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Se8-SY-Azv">
+                                <rect key="frame" x="124" y="60" width="274" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Zc-d1-5La">
-                                <rect key="frame" x="159" y="86" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Zc-d1-5La">
+                                <rect key="frame" x="124" y="91" width="274" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SZN-Qh-69P">
-                                <rect key="frame" x="159" y="128" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Yy-pi-VUi">
-                                <rect key="frame" x="33" y="170" width="350" height="692"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Yy-pi-VUi">
+                                <rect key="frame" x="16" y="172" width="382" height="706"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SZN-Qh-69P">
+                                <rect key="frame" x="124" y="122" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SZN-Qh-69P" firstAttribute="leading" secondItem="5Zc-d1-5La" secondAttribute="leading" id="0uI-vT-YeR"/>
+                            <constraint firstItem="lQ8-K2-aAt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="12a-P9-MXa"/>
+                            <constraint firstItem="5Zc-d1-5La" firstAttribute="centerY" secondItem="lQ8-K2-aAt" secondAttribute="centerY" id="2oM-BH-qzh"/>
+                            <constraint firstItem="Se8-SY-Azv" firstAttribute="leading" secondItem="lQ8-K2-aAt" secondAttribute="trailing" constant="8" id="4MU-zf-YNI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Se8-SY-Azv" secondAttribute="trailing" constant="16" id="7V2-Ah-Dqp"/>
+                            <constraint firstItem="5Zc-d1-5La" firstAttribute="leading" secondItem="Se8-SY-Azv" secondAttribute="leading" id="Cg2-YR-axX"/>
+                            <constraint firstItem="Se8-SY-Azv" firstAttribute="top" secondItem="lQ8-K2-aAt" secondAttribute="top" id="DeN-Sl-umt"/>
+                            <constraint firstItem="5Zc-d1-5La" firstAttribute="trailing" secondItem="Se8-SY-Azv" secondAttribute="trailing" id="F3O-A1-ajZ"/>
+                            <constraint firstItem="lQ8-K2-aAt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HAl-uh-pae"/>
+                            <constraint firstItem="2Yy-pi-VUi" firstAttribute="trailing" secondItem="SZN-Qh-69P" secondAttribute="trailing" id="QBj-zp-PDN"/>
+                            <constraint firstItem="2Yy-pi-VUi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="16" id="Tgp-DT-mJe"/>
+                            <constraint firstItem="2Yy-pi-VUi" firstAttribute="leading" secondItem="lQ8-K2-aAt" secondAttribute="leading" id="bdi-LA-YUu"/>
+                            <constraint firstItem="SZN-Qh-69P" firstAttribute="bottom" secondItem="lQ8-K2-aAt" secondAttribute="bottom" id="gOt-9l-WBZ"/>
+                            <constraint firstItem="2Yy-pi-VUi" firstAttribute="top" secondItem="lQ8-K2-aAt" secondAttribute="bottom" constant="16" id="wW2-kr-r3k"/>
+                            <constraint firstItem="SZN-Qh-69P" firstAttribute="trailing" secondItem="5Zc-d1-5La" secondAttribute="trailing" id="yGu-bI-o1u"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
