@@ -22,6 +22,10 @@ class ViewController: UIViewController {
     @IBAction func touchUpResetButton(_ sender: UIButton) {
         print("touch up reset button")
     }
+    @IBAction func tapBackground(_ sender: UITapGestureRecognizer) {
+        print("tap background view")
+        inputField.resignFirstResponder()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
