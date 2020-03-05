@@ -15,6 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet var turnCountLabel: UILabel!
     @IBOutlet var inputField: UITextField!
     
+    // MARK: - Methods
+    @IBAction func touchUpSubmitButton(_ sender: UIButton) {
+        print("touch up submit button")
+    }
+    @IBAction func touchUpResetButton(_ sender: UIButton) {
+        print("touch up reset button")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
