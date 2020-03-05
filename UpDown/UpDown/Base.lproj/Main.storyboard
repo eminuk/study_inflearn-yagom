@@ -65,6 +65,11 @@
                             <outletCollection property="gestureRecognizers" destination="9Va-lb-1Jh" appends="YES" id="I6I-qg-IS2"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="inputField" destination="ggc-5n-m56" id="5ft-cm-uf9"/>
+                        <outlet property="resultLable" destination="BXa-Fp-5cG" id="dC2-ia-LNl"/>
+                        <outlet property="turnCountLabel" destination="NY8-eF-9Bi" id="cv8-TQ-hsy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="9Va-lb-1Jh"/>

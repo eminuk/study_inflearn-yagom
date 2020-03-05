@@ -9,7 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    // MARK: - Properties
+    // MARK: - IBOutlets
+    @IBOutlet var resultLable: UILabel!
+    @IBOutlet var turnCountLabel: UILabel!
+    @IBOutlet var inputField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
