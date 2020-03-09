@@ -61,7 +61,6 @@ class ViewController: UIViewController {
     
     // MARK: Custom Methods
     func initializeGame(){
-        
         self.randomNumber = arc4random() % 25
         self.turnCount = 0
         
