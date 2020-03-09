@@ -17,6 +17,10 @@
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xln-iR-Vg4">
                                 <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jt0-wz-mRq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fjt-AI-FyT"/>
+                                </connections>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dsJ-th-Bj1">
                                 <rect key="frame" x="16" y="480" width="382" height="150"/>
@@ -24,17 +28,29 @@
                                     <slider opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="zSe-QQ-bTc">
                                         <rect key="frame" x="-2" y="0.0" width="386" height="31"/>
                                         <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="silderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="lAK-6x-L7Z"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="9gT-1g-NUh">
                                         <rect key="frame" x="-2" y="40" width="386" height="31"/>
                                         <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="silderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="K9V-t4-Vrt"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="sDB-UE-c47">
                                         <rect key="frame" x="-2" y="80" width="386" height="31"/>
+                                        <connections>
+                                            <action selector="silderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rcd-Jc-Peo"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bq5-yx-AN3">
                                         <rect key="frame" x="-2" y="120" width="386" height="31"/>
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <connections>
+                                            <action selector="silderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ceb-58-qeO"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -58,6 +74,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="colorView" destination="Mf0-tQ-UY9" id="cY3-ga-dx7"/>
+                        <outlet property="pickerView" destination="Xln-iR-Vg4" id="lrg-Zj-DYA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
