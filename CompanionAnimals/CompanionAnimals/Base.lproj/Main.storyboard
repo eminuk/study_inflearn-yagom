@@ -1,24 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Main View Controller-->
+        <scene sceneID="7q1-QD-rsh">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="b6s-ot-lTK" customClass="MainViewController" customModule="CompanionAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iIX-Jv-kC8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1G-FF-oIP">
+                                <rect key="frame" x="20" y="64" width="177" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="o1G-FF-oIP" secondAttribute="height" multiplier="1:1" id="raH-2Y-vxT"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="dog"/>
+                            </button>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXe-eh-l17">
+                                <rect key="frame" x="217" y="64" width="177" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uXe-eh-l17" secondAttribute="height" multiplier="1:1" id="WEK-m7-2qp"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="cat"/>
+                            </button>
+                            <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZr-y0-aH0">
+                                <rect key="frame" x="217" y="261" width="177" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kZr-y0-aH0" secondAttribute="height" multiplier="1:1" id="CEq-6p-LeW"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="hedgehog"/>
+                            </button>
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcP-oU-usq">
+                                <rect key="frame" x="20" y="261" width="177" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XcP-oU-usq" secondAttribute="height" multiplier="1:1" id="4Lh-lA-vpC"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="rabbit"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdw-mR-9MW">
+                                <rect key="frame" x="20" y="468" width="374" height="30"/>
+                                <state key="normal" title="만든이"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uXe-eh-l17" firstAttribute="width" secondItem="o1G-FF-oIP" secondAttribute="width" id="0qz-qT-l9O"/>
+                            <constraint firstItem="uXe-eh-l17" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="o1G-FF-oIP" secondAttribute="trailing" constant="20" id="1Ua-5s-Y4a"/>
+                            <constraint firstItem="jdw-mR-9MW" firstAttribute="trailing" secondItem="kZr-y0-aH0" secondAttribute="trailing" id="6AN-az-Zfn"/>
+                            <constraint firstItem="OTi-4H-grc" firstAttribute="trailing" secondItem="uXe-eh-l17" secondAttribute="trailing" constant="20" id="AY7-9A-xKH"/>
+                            <constraint firstItem="o1G-FF-oIP" firstAttribute="leading" secondItem="OTi-4H-grc" secondAttribute="leading" constant="20" id="Qzz-go-KEF"/>
+                            <constraint firstItem="XcP-oU-usq" firstAttribute="trailing" secondItem="o1G-FF-oIP" secondAttribute="trailing" id="a4D-2d-lFT"/>
+                            <constraint firstItem="OTi-4H-grc" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jdw-mR-9MW" secondAttribute="bottom" constant="30" id="cfj-KB-AFQ"/>
+                            <constraint firstItem="o1G-FF-oIP" firstAttribute="top" secondItem="OTi-4H-grc" secondAttribute="top" constant="20" id="ePP-Ft-jIh"/>
+                            <constraint firstItem="uXe-eh-l17" firstAttribute="top" secondItem="o1G-FF-oIP" secondAttribute="top" id="ea1-AK-EMZ"/>
+                            <constraint firstItem="XcP-oU-usq" firstAttribute="top" secondItem="o1G-FF-oIP" secondAttribute="bottom" constant="20" id="gY6-xj-Ogw"/>
+                            <constraint firstItem="jdw-mR-9MW" firstAttribute="leading" secondItem="XcP-oU-usq" secondAttribute="leading" id="gtV-ex-Ogz"/>
+                            <constraint firstItem="kZr-y0-aH0" firstAttribute="trailing" secondItem="uXe-eh-l17" secondAttribute="trailing" id="knF-WH-g0Y"/>
+                            <constraint firstItem="kZr-y0-aH0" firstAttribute="top" secondItem="uXe-eh-l17" secondAttribute="bottom" constant="20" id="m04-hp-EhD"/>
+                            <constraint firstItem="XcP-oU-usq" firstAttribute="leading" secondItem="o1G-FF-oIP" secondAttribute="leading" id="rfx-m6-ikj"/>
+                            <constraint firstItem="kZr-y0-aH0" firstAttribute="leading" secondItem="uXe-eh-l17" secondAttribute="leading" id="vjd-MO-s0l"/>
+                            <constraint firstItem="jdw-mR-9MW" firstAttribute="top" secondItem="kZr-y0-aH0" secondAttribute="bottom" constant="30" id="zdu-3Y-4uL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OTi-4H-grc"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5aX-Wx-l1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-40.579710144927539" y="36.830357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cat" width="330" height="330"/>
+        <image name="dog" width="330" height="330"/>
+        <image name="hedgehog" width="330" height="330"/>
+        <image name="rabbit" width="330" height="330"/>
+    </resources>
 </document>
