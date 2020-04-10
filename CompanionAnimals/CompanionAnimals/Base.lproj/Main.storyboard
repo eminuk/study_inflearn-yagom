@@ -139,6 +139,11 @@
                         <viewLayoutGuide key="safeArea" id="xqw-CW-Nja"/>
                     </view>
                     <navigationItem key="navigationItem" id="w0e-Im-4zi"/>
+                    <connections>
+                        <outlet property="animalImageView" destination="DbC-F6-O3W" id="hO4-DP-4T4"/>
+                        <outlet property="descriptionTextView" destination="QcW-xK-mkD" id="lwW-Ga-LA1"/>
+                        <outlet property="nameLabel" destination="CCB-BA-0fQ" id="0nc-W3-0rd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jab-GL-4rI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,10 +170,14 @@
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdA-Zc-dR8">
                                 <rect key="frame" x="16" y="762" width="382" height="30"/>
                                 <state key="normal" title="닫기"/>
+                                <connections>
+                                    <action selector="touchUpInsideDismissButton:" destination="ux6-t0-r4s" eventType="touchUpInside" id="Nc8-kN-w1R"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -186,6 +195,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fmj-fs-Y7x"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="oHq-IQ-mcb" id="heX-Cn-KM4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TsB-BA-wX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

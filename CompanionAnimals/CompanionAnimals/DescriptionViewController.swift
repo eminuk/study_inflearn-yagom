@@ -10,6 +10,12 @@ import UIKit
 
 class DescriptionViewController: UIViewController {
 
+    // MARK: IBOutlets
+    @IBOutlet var animalImageView: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var descriptionTextView: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
