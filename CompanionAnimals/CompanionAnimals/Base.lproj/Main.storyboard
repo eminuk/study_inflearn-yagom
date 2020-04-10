@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gv8-y8-ZHn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--반려동물-->
         <scene sceneID="7q1-QD-rsh">
             <objects>
                 <viewController id="b6s-ot-lTK" customClass="MainViewController" customModule="CompanionAnimals" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,36 +16,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1G-FF-oIP">
-                                <rect key="frame" x="20" y="64" width="177" height="177"/>
+                                <rect key="frame" x="20" y="108" width="177" height="177"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="o1G-FF-oIP" secondAttribute="height" multiplier="1:1" id="raH-2Y-vxT"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="dog"/>
+                                <connections>
+                                    <segue destination="d3R-tV-EB3" kind="show" id="jcg-ZR-m1e"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXe-eh-l17">
-                                <rect key="frame" x="217" y="64" width="177" height="177"/>
+                                <rect key="frame" x="217" y="108" width="177" height="177"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uXe-eh-l17" secondAttribute="height" multiplier="1:1" id="WEK-m7-2qp"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="cat"/>
+                                <connections>
+                                    <segue destination="d3R-tV-EB3" kind="show" id="stg-F7-RNt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZr-y0-aH0">
-                                <rect key="frame" x="217" y="261" width="177" height="177"/>
+                                <rect key="frame" x="217" y="305" width="177" height="177"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kZr-y0-aH0" secondAttribute="height" multiplier="1:1" id="CEq-6p-LeW"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="hedgehog"/>
+                                <connections>
+                                    <segue destination="d3R-tV-EB3" kind="show" id="oAg-wr-4Ej"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcP-oU-usq">
-                                <rect key="frame" x="20" y="261" width="177" height="177"/>
+                                <rect key="frame" x="20" y="305" width="177" height="177"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XcP-oU-usq" secondAttribute="height" multiplier="1:1" id="4Lh-lA-vpC"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="rabbit"/>
+                                <connections>
+                                    <segue destination="d3R-tV-EB3" kind="showDetail" id="KQF-yi-rQc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdw-mR-9MW">
-                                <rect key="frame" x="20" y="468" width="374" height="30"/>
+                                <rect key="frame" x="20" y="512" width="374" height="30"/>
                                 <state key="normal" title="만든이"/>
+                                <connections>
+                                    <segue destination="ux6-t0-r4s" kind="presentation" id="Q6U-TE-iYv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -69,10 +84,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OTi-4H-grc"/>
                     </view>
+                    <navigationItem key="navigationItem" title="반려동물" id="mT7-5z-r06"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aX-Wx-l1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-40.579710144927539" y="36.830357142857139"/>
+            <point key="canvasLocation" x="869.56521739130437" y="36.830357142857139"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="ce9-cV-coy">
@@ -83,13 +99,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DbC-F6-O3W">
-                                <rect key="frame" x="16" y="60" width="382" height="382"/>
+                                <rect key="frame" x="16" y="104" width="382" height="382"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DbC-F6-O3W" secondAttribute="height" multiplier="1:1" id="0Af-C5-BG6"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QcW-xK-mkD">
-                                <rect key="frame" x="16" y="478.5" width="382" height="367.5"/>
+                                <rect key="frame" x="16" y="522.5" width="382" height="323.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Qpr-md-5ut"/>
@@ -100,7 +116,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCB-BA-0fQ">
-                                <rect key="frame" x="16" y="450" width="382" height="20.5"/>
+                                <rect key="frame" x="16" y="494" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -122,27 +138,28 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xqw-CW-Nja"/>
                     </view>
+                    <navigationItem key="navigationItem" id="w0e-Im-4zi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jab-GL-4rI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="658" y="37"/>
+            <point key="canvasLocation" x="1568.1159420289857" y="36.830357142857139"/>
         </scene>
         <!--Maker View Controller-->
         <scene sceneID="CtD-JD-ssh">
             <objects>
                 <viewController id="ux6-t0-r4s" customClass="MakerViewController" customModule="CompanionAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SyA-AK-jC8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yagom" translatesAutoresizingMaskIntoConstraints="NO" id="ofu-Hv-52C">
-                                <rect key="frame" x="145" y="60" width="124" height="124"/>
+                                <rect key="frame" x="145" y="16" width="124" height="124"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ofu-Hv-52C" secondAttribute="height" multiplier="1:1" id="yoI-wW-H6b"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oHq-IQ-mcb">
-                                <rect key="frame" x="16" y="192" width="382" height="616"/>
+                                <rect key="frame" x="16" y="148" width="382" height="606"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -150,7 +167,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdA-Zc-dR8">
-                                <rect key="frame" x="16" y="816" width="382" height="30"/>
+                                <rect key="frame" x="16" y="762" width="382" height="30"/>
                                 <state key="normal" title="닫기"/>
                             </button>
                         </subviews>
@@ -172,9 +189,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TsB-BA-wX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1323" y="37"/>
+            <point key="canvasLocation" x="2231.8840579710145" y="36.830357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZZ2-Vx-zQ1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gv8-y8-ZHn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JGq-dC-1OE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b6s-ot-lTK" kind="relationship" relationship="rootViewController" id="BBp-Wi-m7m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TYn-pe-O8H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-40.579710144927539" y="36.830357142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oAg-wr-4Ej"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="cat" width="330" height="330"/>
         <image name="dog" width="330" height="330"/>
