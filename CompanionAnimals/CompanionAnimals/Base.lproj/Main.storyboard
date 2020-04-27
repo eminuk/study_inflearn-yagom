@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gv8-y8-ZHn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,7 +52,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="rabbit"/>
                                 <connections>
-                                    <segue destination="d3R-tV-EB3" kind="showDetail" id="KQF-yi-rQc"/>
+                                    <segue destination="d3R-tV-EB3" kind="show" id="KQF-yi-rQc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdw-mR-9MW">
@@ -201,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TsB-BA-wX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2231.8840579710145" y="36.830357142857139"/>
+            <point key="canvasLocation" x="1568" y="763"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZZ2-Vx-zQ1">
@@ -223,7 +223,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oAg-wr-4Ej"/>
+        <segue reference="KQF-yi-rQc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cat" width="330" height="330"/>

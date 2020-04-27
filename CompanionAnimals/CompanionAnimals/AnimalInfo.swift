@@ -10,7 +10,7 @@ import UIKit
 
 struct AnimalInfo: Codable {
     let name: String
-    let animalDescriptioin: String
+    let animalDescription: String
     let imageName: String
     
     static func decode(from assetName: String) -> AnimalInfo? {
