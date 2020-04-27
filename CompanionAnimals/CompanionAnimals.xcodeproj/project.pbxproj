@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F1C430E2456A03100AA8799 /* AnimalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C430D2456A03100AA8799 /* AnimalInfo.swift */; };
 		8F8DF0DD243EEF5400118FC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8DF0DC243EEF5400118FC1 /* AppDelegate.swift */; };
 		8F8DF0DF243EEF5400118FC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8DF0DE243EEF5400118FC1 /* SceneDelegate.swift */; };
 		8F8DF0E4243EEF5400118FC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8DF0E2243EEF5400118FC1 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F1C430D2456A03100AA8799 /* AnimalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalInfo.swift; sourceTree = "<group>"; };
 		8F8DF0D9243EEF5400118FC1 /* CompanionAnimals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanionAnimals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8DF0DC243EEF5400118FC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F8DF0DE243EEF5400118FC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				8F8DF0DE243EEF5400118FC1 /* SceneDelegate.swift */,
 				8F8DF0E2243EEF5400118FC1 /* Main.storyboard */,
 				8F8DF0F4243EF83800118FC1 /* MainViewController.swift */,
+				8F1C430D2456A03100AA8799 /* AnimalInfo.swift */,
 				8F8DF0F6243EF8A100118FC1 /* DescriptionViewController.swift */,
 				8F8DF0FA243EF9C200118FC1 /* MakerViewController.swift */,
 				8F8DF0E5243EEF5800118FC1 /* Assets.xcassets */,
@@ -157,6 +160,7 @@
 				8F8DF0F7243EF8A100118FC1 /* DescriptionViewController.swift in Sources */,
 				8F8DF0DD243EEF5400118FC1 /* AppDelegate.swift in Sources */,
 				8F8DF0DF243EEF5400118FC1 /* SceneDelegate.swift in Sources */,
+				8F1C430E2456A03100AA8799 /* AnimalInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
